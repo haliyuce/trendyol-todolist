@@ -1,0 +1,20 @@
+spring:
+  couchbase:
+    bootstrap-hosts: localhost:32777
+    env:
+      timeouts:
+        connect: 100000
+        socket-connect: 100000
+    bucket:
+      name: todolist
+      password: 123456
+  data:
+    couchbase:
+      auto-index: true
+
+---
+  
+spring:
+  profiles: local
+  couchbase:
+    bootstrap-hosts: localhost:32777
